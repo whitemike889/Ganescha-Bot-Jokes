@@ -1,0 +1,46 @@
+# Files
+npm-debug.log
+error.txt
+
+# Directories 
+node_modules/
+report/
+img/**/*
+
+# Useless images
+docs/img/Overview.dia~
+docs/img/Relationshipgenerator.dia~
+docs/img/Roadmap.dia~
+docs/img/PostEvaluation.dia~
+
+# Allow
+!img/simple_post/git_init.txt
+!img/relationship_post/git_init.txt
+!img/hdd_post/posted/git_init.txt
+!img/scheduled_posts/git_init.txt
+
+# Apple Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
