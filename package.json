@@ -11,13 +11,13 @@
         "type": "git",
         "url": "https://github.com/GaneschaLabs/Ganescha-Bot-Jokes"
     },
-    "license": "MIT",
+    "license": "GL",
     "engines": {
         "node": ">=6.0.0"
     },
     "dependencies": {},
     "devDependencies": {
-        "grunt-minor-major-milestone": "0.0.6",
+        "grunt-minor-major-milestone": "0.1.0",
         "grunt-contrib-jshint": "1.0.0",
         "grunt-license-report": "0.0.8",
         "grunt-merge-conflict": "0.0.2",
