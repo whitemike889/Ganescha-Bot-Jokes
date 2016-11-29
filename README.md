@@ -6,7 +6,7 @@ This is part of the Ganescha Ecosystem and is mainly used as testing data.
 
 ## Usage
 
-Comes with 100 Jokes in string array.
+Comes with 102 Jokes in string array.
 
 ```javascript
 const jokes = require('Ganescha-Bot-Jokes');
