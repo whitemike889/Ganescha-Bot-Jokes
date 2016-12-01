@@ -6,7 +6,9 @@ This is part of the Ganescha Ecosystem and is mainly used as testing data.
 
 ## Usage
 
-Comes with 102 Jokes in a string array.
+This module is just a big array of strings.
+Amount of jokes 102.
+All Jokes are >= 117 chars.
 
 ```javascript
 const jokes = require('Ganescha-Bot-Jokes');
