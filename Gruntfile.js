@@ -5,8 +5,44 @@ require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 const allJSFiles = 'lib/jokes.js';
 const gruntfilePath = 'Gruntfile.js';
 
+const cwd = './';
+const jokes = './lib/jokes.js';
+const es5js = './dist/build.es5.js';
+const minjs = './dist/build.min.js';
+
 grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+	
+    babel: {
+        options: {
+            presets: ['es2015-without-strict']
+        },
+
+        dist: {
+            files: [{
+                src: jokes,
+                dest: es5js
+            }]
+        }
+    },
+	
+    uglify: {
+        build: {
+            options: {
+                screwIE8: true,
+                drop_console: true,
+                drop_debugger: true,
+                sourceMap: false
+            },
+
+            files: [{
+                expand: false,
+                cwd: cwd,
+                src: es5js,
+                dest: minjs
+            }]
+        }
+    },
 
     jshint: {
         files: [
@@ -122,6 +158,10 @@ grunt.initConfig({
         mocha: 'mocha --harmony;',
         grep: 'echo \'grep for console.log\'; cd lib; grep -nr \'console.log\' .; echo \'\''
     },
+	
+    clean: [
+        es5js
+    ],
     
     'minor-major-milestone': {
         minor: {
@@ -139,6 +179,8 @@ grunt.initConfig({
 
 // ---------------------------- Tasks ----------------------------
 grunt.registerTask('default', [
+    'babel',
+    'uglify',
     'jshint',
     'jsonlint',
     'merge-conflict',
@@ -148,6 +190,7 @@ grunt.registerTask('default', [
     'todo',
     'exec:mocha',
     'exec:grep',
+	'clean',
     'cowsay'
 ]);
 
