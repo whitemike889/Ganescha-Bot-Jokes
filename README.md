@@ -7,7 +7,7 @@ This is part of the Ganescha Ecosystem and is mainly used as testing data.
 ## Usage
 
 This module is just a big array of strings.
-Amount of jokes 112.
+Amount of jokes 117.
 All Jokes are >= 117 chars.
 
 ### Node
